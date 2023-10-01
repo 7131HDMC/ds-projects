@@ -1,2 +1,3 @@
-# dash
-Repository with some projects study case with Dash and Streamlit.
+# Data Science Projects
+Repository with some projects study case.
+
