@@ -1,5 +1,7 @@
 import numpy as np
 
+from math import exp
+
 class ActivationFunctions:
     
     def step(self, sum):
@@ -8,8 +10,12 @@ class ActivationFunctions:
     def relu(self, sum):
         return sum if sum>=0 else 0
 
-    def sigmoid(self, sum):
-        return 1 / ( 1 - np.exp(-sum))
+    def sigmoid(x: float) -> float:
+        return 1.0 / (1.0 + exp(-x))
+
+
+    def sigmoid_derivative(z: float) -> float:
+        return z * (1.0 - z)
 
     def hiperbolicTangent(self, sum):
         return (np.exp(sum) - np.exp(-sum)) / (np.exp(sum) + np.exp(-sum)) 
